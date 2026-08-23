@@ -339,10 +339,24 @@ section { padding: 120px 0; }
 .service-card p { position: relative; z-index: 2; font-size: 13px; color: var(--ivory-dim); }
 
 /* ---------- Why us ---------- */
-.why-grid {
+.why-section {
+  position: relative;
+  background:
+    linear-gradient(90deg, rgba(14,14,14,0.55) 0%, rgba(14,14,14,0.75) 45%, rgba(14,14,14,0.4) 100%),
+    url('images/why-bg.jpg') center / contain no-repeat,
+    var(--black-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.why-panel {
+  max-width: 620px;
+  background: rgba(14,14,14,0.55);
+  backdrop-filter: blur(4px);
+  padding: 8px 28px 28px;
+  border: 1px solid rgba(244,241,234,0.12);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 60px;
+  gap: 30px 40px;
 }
 .why-item { display: flex; gap: 20px; }
 .why-icon {
@@ -568,7 +582,7 @@ footer {
   .booking-inner { grid-template-columns: 1fr 1fr; }
   .booking-card { margin-top: -120px; }
   .services-grid { grid-template-columns: 1fr 1fr; }
-  .why-grid { grid-template-columns: 1fr; }
+  .why-panel { grid-template-columns: 1fr; max-width: 100%; }
   .fleet-card { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
   .testimonial-grid { grid-template-columns: 1fr; }
