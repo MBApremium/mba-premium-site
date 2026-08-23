@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MBA Premium — Chauffeur Privé VTC Paris & Île-de-France</title>
+<meta name="description" content="MBA Premium, chauffeur privé VTC haut de gamme à Paris. Transferts aéroports, gares, longue distance et mise à disposition. Réservation en ligne, suivi en temps réel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo-lockup">
+      <img src="images/logo.png" alt="MBA Premium" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#comment">Comment ça marche</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <span class="nav-phone">+33 6 36 39 31 44</span>
+      <a href="https://mbapremium.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Réserver</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-stars">★★★★★</div>
+      <span class="eyebrow">MBA Premium · Chauffeur Privé VTC</span>
+      <h1>Votre <em>Chauffeur Privé</em><br>à Paris & Île-de-France</h1>
+      <p class="hero-sub">Transferts aéroports, gares, trajets d'affaires et longue distance. Un seul chauffeur, une exigence constante : ponctualité, discrétion et confort.</p>
+      <div class="hero-actions">
+        <a href="https://mbapremium.vercel.app/" target="_blank" rel="noopener" class="btn btn-hero-outline">Réserver votre trajet</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>24/7</strong><span>Disponibilité</span></div>
+        <div><strong>100%</strong><span>Tarif fixe annoncé</span></div>
+        <div><strong>5★</strong><span>Service soigné</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CARD -->
+  <div class="booking-card reveal">
+    <div class="container" style="padding:0; margin-bottom:18px;">
+      <h2 style="font-size:22px;">Réserver votre transfert</h2>
+    </div>
+    <div class="booking-inner">
+      <div class="field">
+        <label for="depart">Adresse de départ</label>
+        <input type="text" id="depart" placeholder="Adresse, aéroport, gare…">
+      </div>
+      <div class="field">
+        <label for="arrivee">Adresse d'arrivée</label>
+        <input type="text" id="arrivee" placeholder="Destination">
+      </div>
+      <div class="field">
+        <label for="date">Date & heure</label>
+        <input type="datetime-local" id="date">
+      </div>
+      <div class="field">
+        <label for="passagers">Nbr de personnes</label>
+        <select id="passagers">
+          <option>1</option><option>2</option><option>3</option><option>4+</option>
+        </select>
+      </div>
+      <a href="https://mbapremium.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary" id="quick-book">Réserver</a>
+    </div>
+    <div class="track-strip">
+      <span>Suivi de votre chauffeur en temps réel</span>
+      <div class="track-line"><div class="track-dot"></div></div>
+      <span>Depuis la réservation jusqu'à l'arrivée</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Services</span>
+        <h2>Un chauffeur, toutes vos exigences</h2>
+        <p>Quatre façons de voyager sereinement, avec le même niveau d'attention à chaque trajet.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-card" style="--service-bg: url('images/service-aeroport.jpg'); background-size: cover; background-position: center;">
+          <span class="tag">Service</span>
+          <h3>Aéroports & Gares</h3>
+          <p>CDG, Orly, Beauvais et toutes les gares parisiennes — suivi en temps réel, ponctualité garantie.</p>
+        </div>
+        <div class="service-card" style="--service-bg: url('images/service-disneyland.jpg'); background-size: cover; background-position: center 30%;">
+          <span class="tag">Service</span>
+          <h3>Transferts Disneyland</h3>
+          <p>Trajet direct et confortable vers Disneyland Paris, en famille, sans changement ni attente.</p>
+        </div>
+        <div class="service-card" style="--service-bg: url('images/app-groupe-restaurant.jpg'); background-size: cover; background-position: center;">
+          <span class="tag">Service</span>
+          <h3>Trajets d'affaires</h3>
+          <p>Rendez-vous professionnels, roadshows, déplacements en journée avec mise à disposition.</p>
+        </div>
+        <div class="service-card" style="--service-bg: url('images/service-longue-distance.jpg'); background-size: cover; background-position: center;">
+          <span class="tag">Service</span>
+          <h3>Longue distance</h3>
+          <p>Trajets vers toute la France, itinéraire optimisé et confort sur la durée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pourquoi MBA Premium</span>
+        <h2>Ce qui change, concrètement</h2>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-item">
+          <div class="why-icon">◈</div>
+          <div>
+            <h3>Suivi en temps réel</h3>
+            <p>Vous suivez l'arrivée de votre chauffeur en direct, comme pour un livreur — sans surprise sur l'heure.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◈</div>
+          <div>
+            <h3>Tarif annoncé, jamais de surprise</h3>
+            <p>Le prix est fixé à la réservation. Ce qui est annoncé est ce qui est payé, sans supplément caché.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◈</div>
+          <div>
+            <h3>Paiement sécurisé</h3>
+            <p>Réglez en ligne par carte ou à bord, en toute sécurité, avec facture envoyée par email.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◈</div>
+          <div>
+            <h3>Un interlocuteur, pas une plateforme</h3>
+            <p>Vous parlez directement à votre chauffeur, pour ajuster un horaire ou un point de rendez-vous.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section id="comment" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Comment ça marche</span>
+        <h2>De la réservation à l'arrivée</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <h3>Réservez en ligne</h3>
+          <p>Renseignez départ, arrivée, date et véhicule. Vous recevez une confirmation immédiate.</p>
+        </div>
+        <div class="step">
+          <h3>Suivez votre chauffeur</h3>
+          <p>Un lien de suivi en temps réel vous est envoyé le jour du trajet.</p>
+        </div>
+        <div class="step">
+          <h3>Profitez du trajet</h3>
+          <p>Prise en charge ponctuelle, confort et discrétion jusqu'à destination.</p>
+        </div>
+        <div class="step">
+          <h3>Payez et recevez la facture</h3>
+          <p>Paiement sécurisé par carte, facture envoyée automatiquement par email.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Avis clients</span>
+        <h2>Ce que disent nos clients</h2>
+      </div>
+      <div class="testimonial-slider reveal">
+        <div class="testimonial-slide active">
+          <div class="stars">★★★★★</div>
+          <p>Chauffeur ponctuel et très professionnel, le suivi en temps réel a été très rassurant pour un vol matinal.</p>
+          <div class="author">Client CDG</div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="stars">★★★★★</div>
+          <p>Trajet d'affaires impeccable, voiture propre et wifi à bord. Je réserve à nouveau sans hésiter.</p>
+          <div class="author">Client La Défense</div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="stars">★★★★★</div>
+          <p>Tarif annoncé respecté à l'euro près, aucune surprise. Exactement ce qu'on attend d'un service premium.</p>
+          <div class="author">Client Gare de Lyon</div>
+        </div>
+      </div>
+      <div class="slider-dots" id="slider-dots"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions fréquentes</h2>
+      </div>
+      <div class="faq-panel reveal">
+        <div class="faq-item">
+          <button class="faq-q">Comment confirmer ma réservation ? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Vous recevez un email de confirmation avec tous les détails du trajet dès la validation de votre réservation.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Puis-je modifier l'horaire après réservation ? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Oui, jusqu'à 24h avant le départ selon disponibilité. Contactez directement le chauffeur par téléphone ou WhatsApp.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Quels moyens de paiement acceptez-vous ? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Carte bancaire en ligne ou à bord, paiement sécurisé. Une facture est envoyée automatiquement par email.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Le suivi en temps réel, comment ça marche ? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Un lien vous est envoyé le jour du trajet pour suivre l'arrivée du chauffeur, comme pour une livraison.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / BOOKING FORM -->
+  <section id="contact">
+    <div class="container">
+      <div class="form-wrap">
+        <div class="form-info reveal">
+          <span class="eyebrow">Réservation</span>
+          <h2>Réservez votre trajet</h2>
+          <p>Renseignez les détails ci-contre, vous recevez une réponse sous peu avec la confirmation et le tarif.</p>
+          <div class="contact-line">📞 <strong>+33 6 36 39 31 44</strong></div>
+          <div class="contact-line">✉️ <strong>contact@mba-premium.fr</strong></div>
+          <div class="contact-line">🕑 <strong>Disponible 24/7</strong></div>
+        </div>
+        <form class="res-form reveal" id="booking-form">
+          <div class="row">
+            <div class="field">
+              <label for="f-depart">Départ</label>
+              <input type="text" id="f-depart" name="depart" required>
+            </div>
+            <div class="field">
+              <label for="f-arrivee">Arrivée</label>
+              <input type="text" id="f-arrivee" name="arrivee" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="f-date">Date & heure</label>
+              <input type="datetime-local" id="f-date" name="date" required>
+            </div>
+            <div class="field">
+              <label for="f-passagers">Passagers</label>
+              <select id="f-passagers" name="passagers">
+                <option>1</option><option>2</option><option>3</option><option>4+</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:18px;">
+            <label for="f-nom">Nom</label>
+            <input type="text" id="f-nom" name="nom" required>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="f-tel">Téléphone</label>
+              <input type="tel" id="f-tel" name="telephone" required>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:18px;">
+            <label for="f-message">Message (optionnel)</label>
+            <textarea id="f-message" name="message" placeholder="Précisions sur le trajet, bagages, vol…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+          <p class="form-note">Vous recevrez une confirmation par email sous peu.</p>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo-lockup"><img src="images/logo.png" alt="MBA Premium" class="logo-img" style="height:60px;"></a>
+        <p style="color:#55554f; font-size:14px; margin-top:16px; max-width:280px;">Chauffeur privé VTC à Paris et en Île-de-France. Réservation en ligne, tarifs fixes, suivi en temps réel.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Transferts aéroports</a></li>
+          <li><a href="#services">Transferts gares</a></li>
+          <li><a href="#services">Trajets d'affaires</a></li>
+          <li><a href="#services">Longue distance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#comment">Comment ça marche</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://mbapremium.vercel.app/" target="_blank" rel="noopener">Réserver</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+33 6 36 39 31 44</li>
+          <li>contact@mba-premium.fr</li>
+          <li>Paris & Île-de-France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MBA Premium — Tous droits réservés</span>
+      <span>
+        <a href="#">Mentions légales</a> · <a href="#">CGV</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/33636393144" class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
