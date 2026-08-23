@@ -2,6 +2,24 @@
 // MBA PREMIUM — script.js
 // ============================================
 
+// --- Menu mobile ---
+const navToggle = document.getElementById('nav-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+if (navToggle && mobileMenu) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    document.body.classList.toggle('menu-open', isOpen);
+    navToggle.textContent = isOpen ? '✕' : '☰';
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      navToggle.textContent = '☰';
+    });
+  });
+}
+
 // --- Carrousel témoignages ---
 const slides = document.querySelectorAll('.testimonial-slide');
 const dotsWrap = document.getElementById('slider-dots');
