@@ -2,6 +2,31 @@
 // MBA PREMIUM — script.js
 // ============================================
 
+// --- Changement de langue FR / EN ---
+function applyLanguage(lang) {
+  const dict = translations[lang] || translations.fr;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+  document.documentElement.setAttribute('lang', lang);
+  localStorage.setItem('mba_lang', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+});
+
+const savedLang = localStorage.getItem('mba_lang') || 'fr';
+applyLanguage(savedLang);
+
 // --- Menu mobile ---
 const navToggle = document.getElementById('nav-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
