@@ -1,0 +1,21 @@
+{
+  "name": "MBA Premium — Chauffeur Privé VTC",
+  "short_name": "MBA Premium",
+  "description": "Chauffeur privé VTC à Paris et en Île-de-France",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b8945a",
+  "icons": [
+    {
+      "src": "images/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
